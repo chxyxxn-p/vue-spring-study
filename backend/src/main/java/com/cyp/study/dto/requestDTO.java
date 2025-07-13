@@ -1,12 +1,12 @@
 package com.cyp.study.dto;
 
-public class UserDTO {
+public class requestDTO {
     private String name;
     private String phone;
     private String birth;
 
     // 기본 생성자
-    public UserDTO() {}
+    public requestDTO() {}
 
     // getter & setter
     public String getName() {

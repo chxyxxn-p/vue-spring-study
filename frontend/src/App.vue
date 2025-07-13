@@ -39,7 +39,10 @@
     </form>
     <div v-show="hasError" style="color: red">
         모든 항목을 입력하세요!
-      </div>
+    </div>
+    <div v-if="responseData" style="color: blue; text:bold;">
+        {{ responseData.name }} ({{  responseData.phone }})님은 한국 나이로 {{ responseData.koreanAge }}세이며, 만으로는 {{ responseData.internationalAge }}세 입니다.
+    </div>
   </div>
 </template>
 
@@ -56,6 +59,8 @@ export default {
 
     const hasError = ref(false);
 
+    const responseData = ref('');
+
     const toBack = () => {
       if(name.value === '' || phone.value === '' || birth.value === ''){
         hasError.value = true;
@@ -69,6 +74,7 @@ export default {
         })
         .then(res => {
           console.log('성공', res.data);
+          responseData.value = res.data;
         })
         .catch(err => {
           console.log('에러', err);
@@ -81,6 +87,7 @@ export default {
       phone,
       birth,
       hasError,
+      responseData,
       toBack,
     }
   }
