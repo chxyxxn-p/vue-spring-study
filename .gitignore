@@ -1,0 +1,24 @@
+# ============================
+# [Java / Spring Boot - Maven]
+# ============================
+**/target/
+**/*.iml
+**/.idea/
+**/.classpath
+**/.project
+**/.settings/
+
+# ====================
+# [Node.js / Vue (Vite)]
+# ====================
+**/node_modules/
+**/dist/
+**/.vite/
+**/.DS_Store
+
+# ==============
+# [OS / Editor]
+# ==============
+*.log
+Thumbs.db
+.DS_Store
