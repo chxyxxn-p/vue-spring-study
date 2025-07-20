@@ -67,7 +67,7 @@ export default {
       } else {
         hasError.value = false;
 
-        axios.post('/api/send', {
+        axios.post('http://localhost:8080/api/send', {
           name: name.value,
           phone: phone.value,
           birth: birth.value        
