@@ -7,4 +7,4 @@ server:
 
 app:
   cors:
-    allowed-origins: "http://localhost:3000"
+    allowed-origins: "http://15.164.166.27:3000"
