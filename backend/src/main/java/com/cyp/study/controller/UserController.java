@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-@CrossOrigin(origins = "http://localhost:3000") // Vue 개발 서버 주소
 @RestController
 @RequestMapping("/api")
 public class UserController {
-
+    @CrossOrigin(origins = "${app.cors.allowed-origins}")
     @PostMapping("/send")
     public responseDTO receiveUserData(@RequestBody requestDTO user) {
 
