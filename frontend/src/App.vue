@@ -67,7 +67,7 @@ export default {
       } else {
         hasError.value = false;
 
-        axios.post(`/api/send`, {
+        axios.post(`${process.env.VUE_APP_API_URL}/api/send`, {
           name: name.value,
           phone: phone.value,
           birth: birth.value        
